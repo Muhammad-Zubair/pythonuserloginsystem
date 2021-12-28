@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+</style>
+
+
+<div class="row align-items-center">
+   <div class="col-md-2"></div>
+   <div class="col-md-6">
+      <main class="form-signin">
+         <form name="login" id="login" method="POST" action="#">
+          <h1 class="h3 mb-3 fw-normal">Please Login <i class="bi bi-box-arrow-in-right"></i> </h1>
+
+          <div class="form-floating">
+            <input type="text" name="nm" class="form-control" id="nm" required onfocusout="validateName()">
+            <label for="floatingInput">User Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <span id="msg" style="color:red; font-size: 13px; font-family: sans-serif; padding: 10px;"></span>
+          </div>
+          <div class="form-floating">
+            <input type="password" name="password" class="form-control" id="password" required onfocusout="validatePass()">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating mb-3">
+            <span id="msgP" style="color:red; font-size: 13px; font-family: sans-serif; padding: 10px;"></span>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+         </form>
+      </main>
+   </div>
+   <div class="col-md-1"></div>
+</div>
+{% endblock %}
